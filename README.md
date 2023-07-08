@@ -58,13 +58,17 @@ For experts, start with a completely fresh (really, I mean it) Ubuntu 22.04 LTS 
 
 Clone this repository and checkout the tag corresponding to the most recent release:
 
-	$ git clone https://github.com/mail-in-a-box/mailinabox
+	$ git clone https://github.com/dragonestrio/mailinabox
 	$ cd mailinabox
 	$ git checkout v62
+    $ nano setup/system.sh
+    find "nameserver 127.0.0.1" & change the ip to "8.8.8.8"
+    ctrl + x >> y >> enter
 
 Begin the installation.
 
 	$ sudo setup/start.sh
+    when you came on the opendkim/opendmarc process, don't setup or cancel it
 
 The installation will install, uninstall, and configure packages to turn the machine into a working, good mail server.
 
